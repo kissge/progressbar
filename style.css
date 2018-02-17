@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Unica+One');
+
+* {
+    font-family: 'Unica One', sans;
+    font-size: 40px;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #c3d9ff;
+    background: -moz-linear-gradient(top, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
+    background: -webkit-linear-gradient(top, #c3d9ff 0%,#b1c8ef 41%,#98b0d9 100%);
+    background: linear-gradient(to bottom, #c3d9ff 0%,#b1c8ef 41%,#98b0d9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3d9ff', endColorstr='#98b0d9',GradientType=0 );
+    overflow: hidden;
+}
+
+div {
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50px;
+    cursor: not-allowed;
+}
+
+#outer {
+    position: absolute;
+    top: calc((100vh - 100px) / 2);
+    left: 10%;
+    width: 80%;
+    background: #eee;
+    display: inline-block;
+}
+
+#inner {
+    width: 0;
+    background: #a9a;
+}
+
+#outer2 {
+    display: inline-block;
+    position: absolute;
+    top: calc((100vh - 100px) / 2);
+    left: 90%;
+    width: 0;
+}
+
+#inner:before, #outer2:before {
+    display: block;
+    text-align: center;
+    width: 300px;
+    margin-left: -150px;
+    position: relative;
+    top: 120px;
+    content: attr(data-val);
+}
